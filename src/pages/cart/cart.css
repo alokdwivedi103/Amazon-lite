@@ -35,14 +35,20 @@ h1{
 .countHandler input {
   width: 30px;
   text-align: center;
-  font-weight: bolder;
-  height:25px;
+  /* font-weight: bold; */
+  height:30px;
+  max-height: 24px;
+  font-size:medium;
 }
-
+.checkout p{
+  font-weight: 500;
+  font-size: large;
+}
 .bt{
   height:30px;
   width:30px;
   margin:5px;
+  
 }
 
 .checkout button {

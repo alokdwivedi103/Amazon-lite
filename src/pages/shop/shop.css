@@ -1,13 +1,72 @@
-.shopTitle {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 20px;
+/* Set default font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
+
+/* Add background color to page */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Add a container to center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add styles to header */
+header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  color: #333333;
+}
+
+/* Add styles to navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+/* Add styles to products */
 .products {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-gap: 20px;
   place-items: center;
 }
 
@@ -19,37 +78,118 @@
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-  width: 250px;
-  height:250px;
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .product .description {
   text-align: center;
-}
-
-.product:hover {
-  transition: 0.3s ease-in;
-  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333333;
 }
 
 .addToCartBttn {
   background-color: transparent;
-  border: 2px solid rgb(19, 19, 19);
+  border: 2px solid #333333;
   min-width: 100px;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 15px;
+  font-size: 16px;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .addToCartBttn:hover {
-  background-color: rgb(19, 19, 19);
-  color: white;
+  background-color: #ff6600;
+  color: #ffffff;
+}
+
+.product:hover {
+  transform: scale(1.05);
   cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .products {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .product {
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .product img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .product {
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .product img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .products {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .product {
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .product img {
+    width: 150px;
+    height: 150px;
+  }
 }
